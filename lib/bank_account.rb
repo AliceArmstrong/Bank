@@ -1,9 +1,3 @@
-# deposit method
-
-# withdrawl method
-
-# print statement
-
 # balance_count = 0
 # arr = []
 # withdraw x
