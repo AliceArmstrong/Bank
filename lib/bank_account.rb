@@ -19,6 +19,7 @@ attr_accessor :balance_count, :account_history
   end
 
   def print_account_history
+    p "Date || Transaction || New balance"
     p @account_history
   end
 

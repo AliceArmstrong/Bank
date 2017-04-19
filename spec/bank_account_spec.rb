@@ -9,13 +9,9 @@ require 'atm'
         expect(bank_account.balance_count).to eq(0)
       end
 
-      # it "balance count can be changed" do
-      #   atm.deposit(4)
-      #   expect(bank_account.balance_count).to eq (5)
-      # end
-
       it "can register a timestamp with deposts/withdrawls" do
-
+        atm.deposit(4)
+        bank_account.print_account_history
       end
 
       it "has an account history" do

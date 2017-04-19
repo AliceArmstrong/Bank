@@ -8,17 +8,19 @@ class Atm
 
   def deposit(dep_amount)
     @bank_account.balance_count += dep_amount
-    save_history(dep_amount, @bank_account.balance_count)
+    @bank_account.save_history(dep_amount, @bank_account.balance_count)
+    return @bank_account.balance_count
   end
 
   def withdraw(wit_amount)
     @bank_account.balance_count -= wit_amount
-    save_history(wit_amount, @bank_account.balance_count)
+    @bank_account.save_history("-#{wit_amount}", @bank_account.balance_count)
+    return @bank_account.balance_count
   end
 
   def save_history(amount, balance)
-    # @bank_account.account_history[amount] = balance
-    @bank_account.account_history.store(amount, balance) # still only showing last element in history hash
+    t = Time.new
+    @bank_account.account_history.store(Time.now.to_i,[t.strftime("%d/%m/%Y"), amount,balance]) # cannot repeat key
   end
 
 end
