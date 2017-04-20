@@ -1,5 +1,5 @@
 class BankAccount
-attr_accessor :balance_count, :account_history, :credit, :debit
+  attr_accessor :balance_count, :account_history, :credit, :debit
 
   def initialize
     @balance_count = 0
@@ -25,7 +25,13 @@ attr_accessor :balance_count, :account_history, :credit, :debit
 
   def print_account_history
     p "Date || Transaction || New balance"
-    p @account_history
+    statement = []
+    @account_history.each { | time, date, transaction, balance |
+    statement << date
+    statement << transaction
+    statement << balance
+    }
+    p statement.join(" || ")
   end
 
 end

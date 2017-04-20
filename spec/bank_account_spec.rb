@@ -9,18 +9,9 @@ require 'atm'
         expect(bank_account.balance_count).to eq(0)
       end
 
-      it "can register a timestamp with deposts/withdrawls" do
-        atm.deposit(4)
-        bank_account.print_account_history
-      end
-
-      it "has an account history" do
-        expect(bank_account.account_history).not_to be_nil
-      end
-
       it "can print the account history" do
-        atm.deposit(5)
-        bank_account.print_account_history
+        bank_account.credit(10)
+        expect(bank_account.print_account_history).to include "2017 || 10 || 10"
       end
 
     end

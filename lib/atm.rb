@@ -1,6 +1,7 @@
 require_relative 'bank_account'
 
 class Atm
+  attr_accessor :deposit, :withdraw
 
   def initialize
     @bank_account = BankAccount.new
