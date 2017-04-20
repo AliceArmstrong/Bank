@@ -1,10 +1,15 @@
-deposits
-withdrawal
-print account statement
+As a user
+So that I can receive my money
+I want to be able to withdraw from my account
 
-date || credit || debit || balance
-14/01/2012 || || 500.00 || 2500.00
-13/01/2012 || 2000.00 || || 3000.00
-10/01/2012 || 1000.00 || || 1000.00
+As a user
+So that I can save my money
+I want to be able to deposit into my account
 
-Guard clauses
+As a user
+So that I can see my account history
+I want to be able to print a bank statement with a timestamp
+
+As a banker
+To protect my assets
+I want to stop a user from withdrawing more than they have
