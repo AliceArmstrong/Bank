@@ -14,4 +14,8 @@ require 'bank_account'
       expect(atm.withdraw(5)).to eq(5)
     end
 
+    it "raises an error if withdraw amount is higher than bank balance" do
+      expect{atm.withdraw(10)}.to raise_error("Amount not available to withdraw")
+    end
+
   end
