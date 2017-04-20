@@ -1,5 +1,4 @@
 ## Bank
-#### Practise tech test
 
 Practise tech test to simulate the workings of a bank with the following specifications:
 
@@ -20,6 +19,7 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 ```
+
 
 I chose Ruby for this tech test as I felt its elegance and simplicity would fit the specifications well. The project is TDD'd with RSpec, and the user stories are of my own devising based on the acceptance criteria. This project inspired an internal debate on the pros and cons of TDD versus BDD, as I wanted to use private methods to better encapsulate the programme but found that it would require me to limit my testing to focus on the behaviour of the methods as opposed to the methods themselves. In the end I slightly sacrificed encapsulation for greater unit test coverage as the description for the tech test was to 'practice your OO design and TDD skills'.
 
